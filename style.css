@@ -34,16 +34,16 @@ body
     
     font-family: 'Futura PT';
     text-transform: uppercase;
-    box-shadow: 0px 1px 0px #ccc;
+    box-shadow: 0px 8px 8px #fff;
     background-color: #fff;
 }
 
-.navbar a
+.notselected
 {
     color: #444;
+    background-color: transparent;
     
     display: inline-block; 
-
     padding: 14px 16px;
     text-align: center;
     text-decoration: none;
@@ -61,4 +61,45 @@ body
     text-align: center;
     text-decoration: none;
     font-size: 17px;
+}
+
+.page
+{
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+.card
+{
+    padding: 14px 16px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h1
+{
+    font-family: 'Futura PT';
+    font-size: 14pt;
+    padding-bottom: 16px;
+}
+
+.card h2
+{
+    font-family: 'Futura PT';
+    font-size: 12pt;
+    padding-bottom: 8px;
+}
+
+.card h3
+{
+    font-family: 'Futura PT';
+    font-size: 10pt;
+    padding-bottom: 4px;
+}
+
+.card-content
+{
+
 }

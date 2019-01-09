@@ -6,7 +6,6 @@
     <title>skift</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script src="main.js"></script>
 </head>
 
 <body>
@@ -16,21 +15,159 @@
             The operating system
         </div>
     </div>
-    
+
     <div class="navbar">
-        <div class="selected" href="#"> news </div>
-        <a href="#"> about </a>
-        <a href="#"> features </a>
-        <a href="#"> download </a>
+        <div class="notselected" id="news" onclick="openPage(event, 'page_news')">news</div>
+        <div class="notselected" id="about" onclick="openPage(event, 'page_about')">about</div>
+        <div class="notselected" id="features" onclick="openPage(event, 'page_features')">features</div>
+        <div class="notselected" id="download" onclick="openPage(event, 'page_download')">download</div>
     </div>
 
-    <p>
-        <b>skiftOS</b> is a operating system for the intel x86 CPUs.
+    <!-- NEWS -------------------------------------------------------------- -->
+    <div id="page_news" class="page">
+        <div class="card">
+            <div class="card-title">
+                After 5 months of working on my operating system, here is where I am...
+            </div>
 
-        <h2>About the system</h2>
+            <div class="card-content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tristique, metus nec pharetra fermentum,
+                erat arcu accumsan nisl, sit amet facilisis erat sem sit amet arcu. Aliquam erat volutpat. Ut a enim ut
+                purus pretium finibus eget a lectus. Mauris ut nisi massa. Quisque rhoncus lectus sit amet lacus
+                vehicula, non porttitor augue pulvinar. Nullam eleifend nulla nec metus convallis ultricies. Quisque
+                feugiat eu risus a ullamcorper. Praesent velit tellus, sollicitudin ut massa in, volutpat varius est.
+                Ut velit felis, dapibus vitae tristique quis, mollis vitae nunc. Quisque eleifend turpis eget justo
+                finibus, non egestas urna hendrerit.
+            </div>
+        </div>
+    </div>
 
-        <h2>About me</h2>
-    </p>
+    <!-- ABOUT ------------------------------------------------------------- -->
+    <div id="page_about" class="page">
+        <div class="card">
+            <div class="card-title">
+                skiftOS
+            </div>
+
+            <div class="card-content">
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                hjert kernel
+            </div>
+
+            <div class="card-content">
+
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-title">
+                hideo compositor
+            </div>
+
+            <div class="card-content">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FEATURES ---------------------------------------------------------- -->
+    <div id="page_features" class="page">
+    </div>
+
+    <!-- Download -------------------------------------------------------------- -->
+    <div id="page_download" class="page">
+        <div class="card">
+            <div class="card-title">
+                Build iso
+            </div>
+
+            <div class="card-content">
+                skiftOS 0.1.0 "babysteps" - iso - source code
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                Running on QEMU
+            </div>
+
+            <div class="card-content">
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                Running on VirtualBox
+            </div>
+
+            <div class="card-content">
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                Running on real hardware
+            </div>
+
+            <div class="card-content">
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                Source code
+            </div>
+
+            <div class="card-content">
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                Building
+            </div>
+
+            <div class="card-content">
+
+            </div>
+        </div>
+    </div>
 </body>
+
+<script>
+    function openPage(evt, pageName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("page");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("selected");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = "notselected";
+        }
+        document.getElementById(pageName).style.display = "block";
+        evt.currentTarget.className = "selected";
+    }
+
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var page = url.searchParams.get("page");
+
+    if (page != null) {
+        document.getElementById(page).click();
+    }
+    else {
+        document.getElementById("default").click();
+    }
+</script>
 
 </html>
