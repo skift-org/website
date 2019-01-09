@@ -6,7 +6,6 @@
     <title>skift</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script type="text/javascript" src="scripts/snarkdown.js"></script>
 </head>
 
 <body>
@@ -161,12 +160,6 @@
     }
     else {
         document.getElementById("news").click();
-    }
-
-
-    cards = document.getElementsByClassName("card");
-    for (i = 0; i < cards.length; i++) {
-        cards[i].innerHTML = parseMD(cards[i].innerText);
     }
 </script>
 
