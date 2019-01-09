@@ -7,7 +7,8 @@ body
 {
     font-family: sans-serif;
     padding: 30px;
-    width: 50%;
+    margin: auto;
+
     margin: auto;
     overflow-y: scroll;
     width: 700px;
@@ -30,6 +31,7 @@ body
 .navbar
 {
     top: 0;
+    width: 100%;
     position: sticky;
     
     font-family: 'Futura PT';
@@ -70,36 +72,23 @@ body
     border-top: none;
 }
 
-.card
-{
-    padding: 14px 16px;
-    margin-top: 32px;
-    margin-bottom: 32px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card h1
+.post-content h1
 {
     font-family: 'Futura PT';
-    font-size: 14pt;
-    padding-bottom: 16px;
 }
 
-.card h2
+.post-content h2
 {
     font-family: 'Futura PT';
-    font-size: 12pt;
-    padding-bottom: 8px;
 }
 
-.card h3
+.post-content h3
 {
     font-family: 'Futura PT';
-    font-size: 10pt;
-    padding-bottom: 4px;
 }
 
-.card-content
-{
 
+.post-title 
+{
+    font-family: 'Futura PT';
 }
