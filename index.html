@@ -6,6 +6,7 @@
     <title>skift</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script type="text/javascript" src="scripts/snarkdown.js"></script>
 </head>
 
 <body>
@@ -23,35 +24,21 @@
         <div class="notselected" id="download" onclick="openPage(event, 'page_download')">download</div>
     </div>
 
+    <div id="cms"></div>
+
     <!-- NEWS -------------------------------------------------------------- -->
     <div id="page_news" class="page">
-        <div class="card">
-            <div class="card-title">
-                After 5 months of working on my operating system, here is where I am...
-            </div>
 
-            <div class="card-content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tristique, metus nec pharetra fermentum,
-                erat arcu accumsan nisl, sit amet facilisis erat sem sit amet arcu. Aliquam erat volutpat. Ut a enim ut
-                purus pretium finibus eget a lectus. Mauris ut nisi massa. Quisque rhoncus lectus sit amet lacus
-                vehicula, non porttitor augue pulvinar. Nullam eleifend nulla nec metus convallis ultricies. Quisque
-                feugiat eu risus a ullamcorper. Praesent velit tellus, sollicitudin ut massa in, volutpat varius est.
-                Ut velit felis, dapibus vitae tristique quis, mollis vitae nunc. Quisque eleifend turpis eget justo
-                finibus, non egestas urna hendrerit.
-            </div>
-        </div>
     </div>
 
     <!-- ABOUT ------------------------------------------------------------- -->
     <div id="page_about" class="page">
         <div class="card">
-            <div class="card-title">
-                skiftOS
-            </div>
-
-            <div class="card-content">
-
-            </div>
+            # Test
+            <br>
+            ## Test
+            <br>
+            ### Test
         </div>
 
         <div class="card">
@@ -63,7 +50,7 @@
 
             </div>
         </div>
-        
+
         <div class="card">
             <div class="card-title">
                 hideo compositor
@@ -143,6 +130,13 @@
     </div>
 </body>
 
+<!-- ES5 Polyfills -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.12/es5-shim.min.js"></script>
+<!-- CMS.js -->
+<script src="./js/cms.js"></script>
+<!-- Config -->
+<script src="./js/config.js"></script>
+
 <script>
     function openPage(evt, pageName) {
         var i, tabcontent, tablinks;
@@ -166,7 +160,13 @@
         document.getElementById(page).click();
     }
     else {
-        document.getElementById("default").click();
+        document.getElementById("news").click();
+    }
+
+
+    cards = document.getElementsByClassName("card");
+    for (i = 0; i < cards.length; i++) {
+        cards[i].innerHTML = parseMD(cards[i].innerText);
     }
 </script>
 
