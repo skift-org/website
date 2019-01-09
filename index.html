@@ -24,143 +24,39 @@
 
     <div id="cms"></div>
 
-    <!-- NEWS -------------------------------------------------------------- -->
-    <div id="page_news" class="page">
+    <!-- ES5 Polyfills -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.12/es5-shim.min.js"></script>
+    <!-- CMS.js -->
+    <script src="./js/cms.js"></script>
+    <!-- Config -->
+    <script src="./js/config.js"></script>
 
-    </div>
-
-    <!-- ABOUT ------------------------------------------------------------- -->
-    <div id="page_about" class="page">
-        <div class="card">
-            # Test
-            <br>
-            ## Test
-            <br>
-            ### Test
-        </div>
-
-        <div class="card">
-            <div class="card-title">
-                hjert kernel
-            </div>
-
-            <div class="card-content">
-
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-title">
-                hideo compositor
-            </div>
-
-            <div class="card-content">
-
-            </div>
-        </div>
-    </div>
-
-    <!-- FEATURES ---------------------------------------------------------- -->
-    <div id="page_features" class="page">
-    </div>
-
-    <!-- Download -------------------------------------------------------------- -->
-    <div id="page_download" class="page">
-        <div class="card">
-            <div class="card-title">
-                Build iso
-            </div>
-
-            <div class="card-content">
-                skiftOS 0.1.0 "babysteps" - iso - source code
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-title">
-                Running on QEMU
-            </div>
-
-            <div class="card-content">
-
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-title">
-                Running on VirtualBox
-            </div>
-
-            <div class="card-content">
-
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-title">
-                Running on real hardware
-            </div>
-
-            <div class="card-content">
-
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-title">
-                Source code
-            </div>
-
-            <div class="card-content">
-
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-title">
-                Building
-            </div>
-
-            <div class="card-content">
-
-            </div>
-        </div>
-    </div>
-</body>
-
-<!-- ES5 Polyfills -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.12/es5-shim.min.js"></script>
-<!-- CMS.js -->
-<script src="./js/cms.js"></script>
-<!-- Config -->
-<script src="./js/config.js"></script>
-
-<script>
-    function openPage(evt, pageName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("page");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
+    <script>
+        function openPage(evt, pageName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("page");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("selected");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = "notselected";
+            }
+            document.getElementById(pageName).style.display = "block";
+            evt.currentTarget.className = "selected";
         }
-        tablinks = document.getElementsByClassName("selected");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = "notselected";
+
+
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        var page = url.searchParams.get("page");
+
+        if (page != null) {
+            document.getElementById(page).click();
         }
-        document.getElementById(pageName).style.display = "block";
-        evt.currentTarget.className = "selected";
-    }
-
-    
-    var url_string = window.location.href;
-    var url = new URL(url_string);
-    var page = url.searchParams.get("page");
-
-    if (page != null) {
-        document.getElementById(page).click();
-    }
-    else {
-        document.getElementById("news").click();
-    }
-</script>
+        else {
+            document.getElementById("news").click();
+        }
+    </script>
 
 </html>
