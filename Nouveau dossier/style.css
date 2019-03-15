@@ -1,0 +1,126 @@
+
+body {
+    background-color: whitesmoke;
+    font-family: sans-serif;
+}
+
+h1{
+    font-size: 18pt;
+}
+
+h2{
+    font-size: 14pt;
+    margin: 4px;
+}
+
+.card {     
+    background-color: white;
+    border-radius: 4px;
+    padding: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.card h1
+{
+    text-align: center;
+}
+
+.card-title {
+    margin-bottom: 8px;
+}
+
+.flat-card {
+    border-width:1px;
+    border-style:solid;
+    border-radius: 4px;
+    
+    padding: 8px;
+    margin-top: 8px;
+
+    border-color:dimgrey;
+    color: dimgrey;
+}
+
+.blue{
+    border-color:#06f;
+    color: #06f;
+}
+
+.green {
+    border-color:#0f6;
+    color: #0f6;
+}
+
+.image { 
+    margin: 8px;
+}
+
+.image img {
+    width:100%;
+}
+
+.image-description {
+    padding: 4px;
+    font-family: serif;
+    text-align: center;
+    quotes: "“" "„";
+    color: gray;
+}
+
+.overable {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);    
+    transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.overable:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.centered {
+    margin: 0 auto;
+}
+
+.button {
+    outline: none;
+    margin: 4px;
+    border: none;
+    border-width:1px;
+    border-style:solid;
+    border-radius: 4px;
+    border-color: #06f;
+
+    padding: 8px 32px;
+
+    background-color: #06f;
+    color: white;
+    
+    vertical-align: middle;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.gost{
+    background-color: white;
+    color: #06f;
+}
+
+.button:hover {
+    background-color: #06f;
+    color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.button:active {
+    background-color: #5af;
+    border-color: #5af;
+    color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.hidden{
+    visibility: hidden;
+    display: none;
+}

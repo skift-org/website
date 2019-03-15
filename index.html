@@ -3,34 +3,50 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>skift</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <title>Page Title</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 
 <body>
-    <div class="title">
-        skift
-        <div class="tagline">
-            The operating system
+    <div class="header">
+        <div class="card menu">
+            <img height="24pt" src="assets/logo.png"/>
+            <div class="menu-item"><i class="fas fa-home"></i> About</div>
+            <div class="menu-item"><i class="fas fa-download"></i> Download</div>
+            <div class="menu-item"><i class="fas fa-code"></i> Source code</div>
         </div>
     </div>
 
-    <div class="navbar">
-        <div class="notselected" id="news" onclick="openPage(event, 'page_news')">news</div>
-        <div class="notselected" id="about" onclick="openPage(event, 'page_about')">about</div>
-        <div class="notselected" id="features" onclick="openPage(event, 'page_features')">features</div>
-        <div class="notselected" id="download" onclick="openPage(event, 'page_download')">download</div>
+    <div class="container">
+
+        <div class="card content">
+            <h1>About</h1>
+
+            <div class="card image">
+                <img src="assets/skift-running.png" />
+                <div class="image-description">
+                    skiftOS running on QEMU 2.11
+                </div>
+            </div>
+
+            <div class="card image">
+                <img src="assets/skift-vbox.png" />
+                <div class="image-description">
+                    skiftOS running on virtualbox 6.0
+                </div>
+            </div>
+        </div>
+
+        <div class="card content">
+            <h1>Download</h1>
+        </div>
+
+        <div class="card content">
+            <h1>Source code</h1>
+        </div>
     </div>
-
-    <div id="cms"></div>
-
-    <!-- ES5 Polyfills -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.12/es5-shim.min.js"></script>
-    <!-- CMS.js -->
-    <script src="./js/cms.js"></script>
-    <!-- Config -->
-    <script src="./js/config.js"></script>
-
-    </script>
+</body>
 
 </html>
