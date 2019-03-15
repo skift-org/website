@@ -14,8 +14,8 @@ body{
 .header::after {
     content: "🚧 WORK IN PROGRESS 🚧";
     background: repeating-linear-gradient(-55deg,
-      #000000cc, #000000cc 15px,
-      #ffee00cc 15px, #ffee00cc 30px);
+      #000000, #000000 15px,
+      #ffee00 15px, #ffee00 30px);
     display: block;
     width: 100%;
     color: white;
@@ -40,16 +40,42 @@ body{
     overflow: hidden;
 }
 
+.raised {
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
 .card h1
 {
     font-family: "Futura PT";
     font-size: 24px;
 }
 
+.ghost-card {
+    border-width:1px;
+    border-style:solid;
+    border-radius: 4px;
+    
+    padding: 8px;
+    margin-top: 8px;
+
+    border-color:dimgrey;
+    color: dimgrey;
+}
+
+.ghost-card-title{
+    font-family: "Futura PT";
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.blue{
+    border-color:#06f;
+    color: #06f;
+}
+
 .image
 { 
     padding: 0px;
-    margin: 8px;
 }
 
 .image img
@@ -79,7 +105,6 @@ body{
 .container
 {
     padding: 16px;
-
     display: grid;
     width: 720px;
     margin: 0 auto;
@@ -89,6 +114,7 @@ body{
 {
     top: 0;
     position: sticky;
+    border-radius: 16px;
     background-color: whitesmoke;
     padding-top: 19px;
     margin: 0 auto;
@@ -123,14 +149,24 @@ body{
 
 .menu-item
 {
+    border-radius: 8px;
+    padding: 8px 24px;
     display: inline-block;
-    padding:  16px 16px;
     vertical-align: middle; 
-    font-family: "Futura PT";
+    font-family: "Futura PT";   
+    text-transform: uppercase; 
 }
 
 .menu-item:hover
 {
     color:white;
-    color: #06f;
+    background-color: #06f;
+}
+
+.code {
+    font-family: monospace;
+    color: black;
+    background-color: lightgrey;
+    border-radius: 8px;
+    padding: 16px;
 }

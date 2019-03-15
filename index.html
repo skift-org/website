@@ -11,7 +11,7 @@
 
 <body>
     <div class="header">
-        <div class="card menu">
+        <div class="card menu raised">
             <img height="24pt" src="assets/logo.png" />
             <a class="menu-item"> News</a>
             <a class="menu-item"> About</a>
@@ -23,34 +23,72 @@
     <div class="container">
 
         <div class="card content">
-            <h1><i class="fas fa-box"></i> News</h1>
+            <h1>News</h1>
             <p>Release 0.1.0</p>
         </div>
 
         <div class="card">
             <h1>About</h1>
 
-            <div class="card image">
-                <img src="assets/skift-running.png" />
-                <div class="image-description">
-                    skiftOS running on QEMU 2.11
-                </div>
-            </div>
-
-            <div class="card image">
-                <img src="assets/skift-vbox.png" />
-                <div class="image-description">
-                    skiftOS running on virtualbox 6.0
-                </div>
+        </div>
+        <div class="card image">
+            <img src="assets/skift-running.png" />
+            <div class="image-description">
+                skiftOS running on QEMU 2.11
             </div>
         </div>
 
         <div class="card">
-            <h1><i class="fas fa-box"></i> Releases</h1>
+            <h1>Features</h1>
+            
+            <ul>
+                <li>Preemptive scheduling</li>
+                <li>Mouse and keyboard</li>
+                <li>IPC - shared memory, message passing and pipes</li>
+                <li>coreutils - ls, cat, sh, ...</li>
+            </ul>
+        </div>
+
+        
+        <div class="card">
+            <h1>Releases</h1>
+
+            <ul>
+                <li>v0.1.0</li>
+            </ul>
+
+            <div class="ghost-card blue">
+                <div class="ghost-card-title"> Running on qemu </div>
+                
+                <p>
+                    QEMU is the prefered platform for testing the operating system.
+                </p>
+
+                Command line option: <br>
+                <div class="code">qemu-system-i386 -cdrom bootdisk.iso -m 1G -enable-kvm</div>
+            </div>
+
+            <div class="ghost-card blue">
+                <div class="ghost-card-title">Running on Virtual box</div>
+                
+                <ul>
+                    <li>Other/Unknow operating system type</li>
+                    <li>At least 128Mib of ram</li>
+                    <li>No harddrive needed</li>
+                    <li>With hardware acceleration</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card image">
+            <img src="assets/skift-vbox.png" />
+            <div class="image-description">
+                skiftOS running on virtualbox 6.0
+            </div>
         </div>
 
         <div class="card">
-            <h1> <i class="fab fa-github"></i> Source code</h1>
+            <h1>Source code</h1>
         </div>
     </div>
 </body>
