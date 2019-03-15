@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Page Title</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="normalize.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
@@ -12,16 +12,22 @@
 <body>
     <div class="header">
         <div class="card menu">
-            <img height="24pt" src="assets/logo.png"/>
-            <div class="menu-item"><i class="fas fa-home"></i> About</div>
-            <div class="menu-item"><i class="fas fa-download"></i> Download</div>
-            <div class="menu-item"><i class="fas fa-code"></i> Source code</div>
+            <img height="24pt" src="assets/logo.png" />
+            <a class="menu-item"> News</a>
+            <a class="menu-item"> About</a>
+            <a class="menu-item"> Releases</a>
+            <a class="menu-item"> Source code</a>
         </div>
     </div>
 
     <div class="container">
 
         <div class="card content">
+            <h1><i class="fas fa-box"></i> News</h1>
+            <p>Release 0.1.0</p>
+        </div>
+
+        <div class="card">
             <h1>About</h1>
 
             <div class="card image">
@@ -39,12 +45,12 @@
             </div>
         </div>
 
-        <div class="card content">
-            <h1>Download</h1>
+        <div class="card">
+            <h1><i class="fas fa-box"></i> Releases</h1>
         </div>
 
-        <div class="card content">
-            <h1>Source code</h1>
+        <div class="card">
+            <h1> <i class="fab fa-github"></i> Source code</h1>
         </div>
     </div>
 </body>
