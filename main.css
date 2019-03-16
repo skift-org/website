@@ -11,7 +11,7 @@ body{
 }
 
 /* from https://codepen.io/raulrpearson/pen/bQrXNG */
-/* .header::after {
+.header::after {
     content: " 🚧 WORK IN PROGRESS 🚧 ";
     background: repeating-linear-gradient(-55deg,
       #000000, #000000 15px,
@@ -27,8 +27,9 @@ body{
     grid-column: 1 / -1;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    margin-top: 16px;
-} */
+    margin-bottom: 16px;
+
+}
 
 .header
 {
@@ -51,13 +52,13 @@ body{
 @media only screen and (max-width: 720px) {
     .container
     {
-        width: 100%;
-        margin: 0;
+        width: 95%;
+        padding: 0;
     }
 
     .header{
-        width: 100%;
-        margin: 0;
+        width: 95%;
+        padding: 0;
     }
 }
 
