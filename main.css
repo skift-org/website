@@ -11,7 +11,7 @@ body{
 }
 
 /* from https://codepen.io/raulrpearson/pen/bQrXNG */
-.header::after {
+/*.header::after {
     content: " 🚧 WORK IN PROGRESS 🚧 ";
     background: repeating-linear-gradient(-55deg,
       #000000, #000000 15px,
@@ -29,18 +29,17 @@ body{
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     margin-bottom: 16px;
 
-}
+}*/
 
 .header
 {
-    top: 0;
+    top: 16px;
     position: sticky;
     border-radius: 16px;
     background-color: whitesmoke;
-    padding-top: 16px;
     margin: 0 auto;
     width: 720px;
-    box-shadow: 0px -16px 8px 9px whitesmoke;
+    box-shadow: 0px -16px 0px 16px whitesmoke;
 }
 
 .container
@@ -53,12 +52,16 @@ body{
     .container
     {
         width: 95%;
-        padding: 0;
+        margin: 0 auto;
     }
 
     .header{
         width: 95%;
-        padding: 0;
+        margin: 0 auto;
+    }
+
+    .menu-item{
+        display: block;
     }
 }
 
@@ -78,7 +81,6 @@ body{
 {
     border-radius: 8px;
     padding: 8px 24px;
-    display: inline-block;
     vertical-align: middle; 
     font-family: "Futura PT";   
     text-transform: uppercase;
