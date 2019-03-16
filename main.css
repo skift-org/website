@@ -11,8 +11,8 @@ body{
 }
 
 /* from https://codepen.io/raulrpearson/pen/bQrXNG */
-.header::after {
-    content: "🚧 WORK IN PROGRESS 🚧";
+/* .header::after {
+    content: " 🚧 WORK IN PROGRESS 🚧 ";
     background: repeating-linear-gradient(-55deg,
       #000000, #000000 15px,
       #ffee00 15px, #ffee00 30px);
@@ -25,10 +25,89 @@ body{
     text-align: center;
     text-shadow: 0px 1px 2px black;
     grid-column: 1 / -1;
-    border-radius: 8px;
+    border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     margin-top: 16px;
-  }
+} */
+
+.header
+{
+    top: 0;
+    position: sticky;
+    border-radius: 16px;
+    background-color: whitesmoke;
+    padding-top: 16px;
+    margin: 0 auto;
+    width: 720px;
+    box-shadow: 0px -16px 8px 9px whitesmoke;
+}
+
+.container
+{
+    width: 720px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 720px) {
+    .container
+    {
+        width: 100%;
+        margin: 0;
+    }
+
+    .header{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+
+.menu
+{
+    padding: 0px 0px;
+    margin-top: 16px;
+}
+
+.menu img {
+    vertical-align: middle;
+    margin: 8px;
+}
+
+.menu-item
+{
+    border-radius: 8px;
+    padding: 8px 24px;
+    display: inline-block;
+    vertical-align: middle; 
+    font-family: "Futura PT";   
+    text-transform: uppercase;
+}
+
+.menu-item:hover
+{
+    color:white;
+    background-color: #06f;
+}
+
+.code {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.0;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
+/* --- Elements ------------------------------------------------------------- */
+
+/* Classic cards */
 
 .card
 {     
@@ -40,15 +119,13 @@ body{
     overflow: hidden;
 }
 
-.raised {
-      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-
 .card h1
 {
     font-family: "Futura PT";
     font-size: 24px;
 }
+
+/* ghost card */
 
 .ghost-card {
     border-width:1px;
@@ -62,16 +139,13 @@ body{
     color: dimgrey;
 }
 
-.ghost-card-title{
+.ghost-card h1{
     font-family: "Futura PT";
     font-size: 14px;
     margin-bottom: 8px;
 }
 
-.blue{
-    border-color:#06f;
-    color: #06f;
-}
+/* image card */
 
 .image
 { 
@@ -91,6 +165,17 @@ body{
     color: rgb(71, 71, 71);
 }
 
+/* --- Modifiers ------------------------------------------------------------ */
+
+.blue {
+    border-color:#06f;
+    color: #06f;
+}
+
+.raised {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
 .overable
 {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);    
@@ -99,74 +184,4 @@ body{
 
 .overable:hover {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-
-
-.container
-{
-    padding: 16px;
-    display: grid;
-    width: 720px;
-    margin: 0 auto;
-}
-
-.header
-{
-    top: 0;
-    position: sticky;
-    border-radius: 16px;
-    background-color: whitesmoke;
-    padding-top: 19px;
-    margin: 0 auto;
-    width: 720px;
-    box-shadow: 0px -16px 8px 9px whitesmoke;
-}
-
-.header h1
-{
-    color: black;
-    padding: 16px;
-    margin: 8px auto;
-}
-
-.search button:hover
-{
-    cursor: pointer;
-    border: none;
-    color: #06f;
-}
-
-.menu
-{
-    padding: 0px 0px;
-    margin: 0px auto;
-}
-
-.menu img {
-    vertical-align: middle;
-    margin: 19px;
-}
-
-.menu-item
-{
-    border-radius: 8px;
-    padding: 8px 24px;
-    display: inline-block;
-    vertical-align: middle; 
-    font-family: "Futura PT";   
-    text-transform: uppercase; 
-}
-
-.menu-item:hover
-{
-    color:white;
-    background-color: #06f;
-}
-
-.code {
-    font-family: monospace;
-    color: black;
-    background-color: lightgrey;
-    border-radius: 8px;
-    padding: 16px;
 }

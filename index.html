@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Page Title</title>
+    <title>skiftOS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="normalize.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
@@ -19,7 +20,7 @@
             <a class="menu-item"> Source code</a>
         </div>
     </div>
-
+    
     <div class="container">
 
         <div class="card content">
@@ -40,7 +41,7 @@
 
         <div class="card">
             <h1>Features</h1>
-            
+
             <ul>
                 <li>Preemptive scheduling</li>
                 <li>Mouse and keyboard</li>
@@ -49,7 +50,7 @@
             </ul>
         </div>
 
-        
+
         <div class="card">
             <h1>Releases</h1>
 
@@ -58,19 +59,18 @@
             </ul>
 
             <div class="ghost-card blue">
-                <div class="ghost-card-title"> Running on qemu </div>
-                
+                <h1> Running on QEMU </h1>
+
                 <p>
                     QEMU is the prefered platform for testing the operating system.
                 </p>
 
-                Command line option: <br>
                 <div class="code">qemu-system-i386 -cdrom bootdisk.iso -m 1G -enable-kvm</div>
             </div>
 
             <div class="ghost-card blue">
-                <div class="ghost-card-title">Running on Virtual box</div>
-                
+                <h1>Running on VirtualBox</h1>
+
                 <ul>
                     <li>Other/Unknow operating system type</li>
                     <li>At least 128Mib of ram</li>
@@ -79,7 +79,7 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="card image">
             <img src="assets/skift-vbox.png" />
             <div class="image-description">
@@ -89,6 +89,10 @@
 
         <div class="card">
             <h1>Source code</h1>
+            <a href="https://github.com/skiftOS/skift">github</a>
+            <div class="ghost-card blue">
+                <h1>Building</h1>
+            </div>
         </div>
     </div>
 </body>
