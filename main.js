@@ -5,6 +5,7 @@ function update_releases()
     fetch('https://api.github.com/repos/skiftOS/skift/releases')
     .then(res => res.json())
     .then((out) => {
+        console.log(out);
         for (const key in out) 
         {
             let release = out[key];

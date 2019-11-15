@@ -34,7 +34,7 @@ body{
 .header
 {
     top: 16px;
-    position: sticky;
+  /* position: sticky; */
     border-radius: 16px;
     background-color: whitesmoke;
     margin: 0 auto;
@@ -42,6 +42,10 @@ body{
     box-shadow: 0px -16px 0px 16px whitesmoke;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
 .container
 {
     width: 720px;
