@@ -34,7 +34,6 @@ body{
 .header
 {
     top: 16px;
-  /* position: sticky; */
     border-radius: 16px;
     background-color: whitesmoke;
     margin: 0 auto;
