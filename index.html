@@ -15,10 +15,11 @@
         <div class="card menu raised">
             <img height="24pt" src="assets/logo.png" />
             <span class="desktop-only">
-                <a class="menu-item"> News</a>
-                <a class="menu-item"> About</a>
-                <a class="menu-item"> Releases</a>
-                <a class="menu-item"> Source code</a>
+
+                <a href="#news" class="menu-item">News</a>
+                <a href="#about" class="menu-item">About</a>
+                <a href="#relases" class="menu-item">Releases</a>
+                <a href="#source" class="menu-item">Source code</a>
             </span>
         </div>
     </div>
@@ -26,26 +27,24 @@
     <div class="container">
 
         <div class="card mobile-only">
-                <a class="menu-item"> News</a>
-                <a class="menu-item"> About</a>
-                <a class="menu-item"> Releases</a>
-                <a class="menu-item"> Source code</a>
+            <a href="#news" class="menu-item">News</a>
+            <a href="#about" class="menu-item">About</a>
+            <a href="#relases" class="menu-item">Releases</a>
+            <a href="#source" class="menu-item">Source code</a>
         </div>
 
-        <div class="card">
+        <div id="news" class="card">
             <h1>News</h1>
             <p>Release 0.1.0</p>
         </div>
 
-        <div class="card">
+        <div id="about" class="card">
             <h1>About</h1>
         </div>
 
         <div class="card image">
             <img src="assets/skift-running.png" />
-            <div class="image-description">
-                skiftOS running on QEMU 2.11
-            </div>
+            <div class="image-description">skiftOS running on QEMU 2.11</div>
         </div>
 
         <div class="card">
@@ -59,8 +58,7 @@
             </ul>
         </div>
 
-
-        <div class="card">
+        <div id="relases" class="card">
             <h1>Releases</h1>
 
             <ul id="releases-list">
@@ -95,7 +93,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div id="source" class="card">
             <h1>Source code</h1>
             <a href="https://github.com/skiftOS/skift">github</a>
             <div class="ghost-card blue">
