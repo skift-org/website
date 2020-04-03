@@ -25,7 +25,7 @@ function update_releases()
 
             item_content += `</li>`;
 
-            releases_list.innerHTML = item_content;
+            releases_list.innerHTML += item_content;
         }
     }).catch(err => releases_list.innerHTML = "Failled to fetch releases... sorry :/");
 }
