@@ -37,6 +37,8 @@ span
     width: 100%;
     border-radius: 0px;
     margin-bottom: 16px;
+    background: #333333f9;
+    box-shadow: 0 1px 0px rgba(255,255,255,0.1);
 }
 
 .logo {
@@ -47,7 +49,6 @@ span
 .header-container
 {
     padding: 8px !important;
-    background: #333333;
 }
 
 .container
@@ -128,12 +129,14 @@ span
     transition: all 0.1s;
 }
 
-.menu-item:hover {
+.menu-item:hover
+{
     color:white;
     background-color: #06f;
 }
 
-.code {
+.code
+{
     background: #f4f4f4;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -149,9 +152,15 @@ span
     word-wrap: break-word;
 }
 
-.link-download {
+.link-download
+{
     padding: 0px 16px;
     text-align: left;
+}
+
+.latest-release-lbl
+{
+    font-weight: normal;
 }
 
 /* --- Elements ------------------------------------------------------------- */
@@ -199,6 +208,13 @@ span
 .ghost-card h1{
     font-size: 14px;
     margin-bottom: 8px;
+}
+
+/* release card */
+.card-release 
+{
+    background: #0066FF;
+    padding: 16px 24px;
 }
 
 /* image card */
