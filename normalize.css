@@ -57,10 +57,6 @@
 		width: auto;
 	} */
 
-	.hide_mobile {
-		display: none !important;
-	}
-
 	/* display block on mobile for release download list */
 	#release-list-div
 	{

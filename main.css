@@ -39,6 +39,7 @@ span
     margin-bottom: 16px;
     background: #333333f9;
     box-shadow: 0 1px 0px rgba(255,255,255,0.1);
+    backdrop-filter: blur(16px);
 }
 
 .logo {
@@ -91,7 +92,6 @@ span
         display: none;
     }
 }
-
 
 .menu
 {
@@ -157,7 +157,6 @@ span
 
 .icon-dl 
 {
-    fill: white;
     margin-right: 4px;
 }
 
