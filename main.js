@@ -17,7 +17,6 @@ function update_releases()
             {
                 let asset = release["assets"][keyAsset];
                 item_content += `<a class="link-download" href=${asset["browser_download_url"]}>${asset["name"]}</a>`;
-
             }
 
             item_content += `<a class="link-download" href=${release["tarball_url"]}>tarball</a>`;

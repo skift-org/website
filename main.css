@@ -1,11 +1,7 @@
-@font-face {
-    font-family: "Futura PT";
-    src: url("assets/FuturaPTDemi.otf");
-}
-
 body{
+    font-family: 'Jost';
+
     background-color: whitesmoke;
-    font-family: sans-serif;
     margin: 0 !important;
     padding: 0 !important;
 }
@@ -19,6 +15,11 @@ body{
     margin: 0 auto;
     width: 720px;
     box-shadow: 0px -16px 0px 16px whitesmoke;
+}
+
+.logo {
+    height: 24px;
+    display: inline-block;
 }
 
 .container
@@ -35,7 +36,6 @@ body{
     }
 
     .desktop-only {
-
     }
 }
 
@@ -80,7 +80,6 @@ body{
     border-radius: 8px;
     padding: 8px 24px;
     vertical-align: middle;
-    font-family: "Futura PT";
     text-transform: uppercase;
     color: black;
     text-decoration: none;
@@ -130,7 +129,6 @@ body{
 
 .card h1
 {
-    font-family: "Futura PT";
     font-size: 24px;
 }
 
@@ -149,7 +147,6 @@ body{
 }
 
 .ghost-card h1{
-    font-family: "Futura PT";
     font-size: 14px;
     margin-bottom: 8px;
 }
@@ -169,7 +166,6 @@ body{
 .image-description
 {
     padding: 4px;
-    font-family: serif;
     text-align: center;
     color: rgb(71, 71, 71);
 }

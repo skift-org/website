@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="normalize.css" />
+    <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 
 <body>
     <div class="header">
         <div class="card menu raised">
-            <img height="24pt" src="assets/logo.png" />
+            <img class="logo" src="assets/logo.png" />
             <span class="desktop-only">
 
                 <a href="#news" class="menu-item">News</a>
@@ -33,17 +34,8 @@
             <a href="#source" class="menu-item">Source code</a>
         </div>
 
-        <div id="news" class="card">
-            <h1>News</h1>
-            <p>Release 0.1.0</p>
-        </div>
-
-        <div id="about" class="card">
-            <h1>About</h1>
-        </div>
-
         <div class="card image">
-            <img src="assets/skift-running.png" />
+            <img src="assets/capture.png" />
             <div class="image-description">skiftOS running on QEMU 2.11</div>
         </div>
 
@@ -59,6 +51,10 @@
         </div>
 
         <div id="relases" class="card">
+            <h1>Source code</h1>
+            <a href="https://github.com/skiftOS/skift">github</a>
+
+
             <h1>Releases</h1>
 
             <ul id="releases-list">
@@ -83,21 +79,6 @@
                     <li>No harddrive needed</li>
                     <li>With hardware acceleration</li>
                 </ul>
-            </div>
-        </div>
-
-        <div class="card image">
-            <img src="assets/skift-vbox.png" />
-            <div class="image-description">
-                skiftOS running on virtualbox 6.0
-            </div>
-        </div>
-
-        <div id="source" class="card">
-            <h1>Source code</h1>
-            <a href="https://github.com/skiftOS/skift">github</a>
-            <div class="ghost-card blue">
-                <h1>Building</h1>
             </div>
         </div>
     </div>
