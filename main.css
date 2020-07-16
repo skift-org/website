@@ -162,10 +162,10 @@ span
 
 .code
 {
-    background: #f4f4f4;
-    border: 1px solid #ddd;
+    background: #444444;
+    border: 1px solid #555555;
     border-radius: 4px;
-    color: #666;
+    color: white;
     page-break-inside: avoid;
     font-family: monospace;
     font-size: 15px;
