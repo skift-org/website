@@ -54,8 +54,8 @@ body
     }
 
     .header{
-        width: 95%;
-        margin: 0 auto;
+        width: 100%;
+        margin: 0;
     }
 
     .menu-item{
@@ -74,6 +74,13 @@ body
 .menu
 {
     padding: 0px 0px;
+}
+
+.mobile-menu
+{
+    background: #333333;
+    padding: 16px;
+    margin-bottom: 16px;
 }
 
 .menu img
@@ -185,7 +192,7 @@ body
 }
 
 .raised {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.23);
 }
 
 .overable
