@@ -125,6 +125,7 @@ span
     text-transform: uppercase;
     color: white;
     text-decoration: none;
+    letter-spacing: 2px;
 
     transition: all 0.1s;
 }
@@ -133,6 +134,31 @@ span
 {
     color:white;
     background-color: #06f;
+}
+
+.dl-item
+{
+    display: flex;
+    border-radius: 8px;
+    padding: 8px 16px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+
+    transition: all 0.1s;
+}
+
+.dl-item:hover
+{
+    background-color: #FFFFFF30;
+}
+
+.icon-dl 
+{
+    fill: white;
+    margin-right: 4px;
 }
 
 .code
@@ -161,6 +187,11 @@ span
 .latest-release-lbl
 {
     font-weight: normal;
+}
+
+.release-info
+{
+    margin-bottom: 12px;
 }
 
 /* --- Elements ------------------------------------------------------------- */
@@ -215,6 +246,12 @@ span
 {
     background: #0066FF;
     padding: 16px 24px;
+    margin-top: 24px;
+}
+
+#release-list-div
+{
+    display: flex;
 }
 
 /* image card */
