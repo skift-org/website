@@ -22,18 +22,18 @@ function update_releases()
 
             if (asset["name"] == "bootdisk.iso")
             {
-                icon = "assets/iso-24px.svg"
+                icon = "album"
             }
             else
             {
-                icon = "assets/file-24px.svg"
+                icon = "insert_drive_file"
             }
 
-            release_list_content += `<a href="${asset["browser_download_url"]}" class="dl-item"><img src="${icon}" class="icon-dl">${asset["name"]}</a>`;
+            release_list_content += `<a href="${asset["browser_download_url"]}" class="dl-item"><span class="material-icons icon-dl">${icon}</span>${asset["name"]}</a>`;
         }
 
-        release_list_content += `<a href="${release["tarball_url"]}" class="dl-item"><img src="assets/zipped-24px.svg" class="icon-dl">tarball</a>`;
-        release_list_content += `<a href="${release["zipball_url"]}" class="dl-item"><img src="assets/zipped-24px.svg" class="icon-dl">zipball</a>`;
+        release_list_content += `<a href="${release["tarball_url"]}" class="dl-item"><span class="material-icons icon-dl">topic</span>tarball</a>`;
+        release_list_content += `<a href="${release["zipball_url"]}" class="dl-item"><span class="material-icons icon-dl">topic</span>zipball</a>`;
 
         release_list_div.innerHTML += release_list_content
 
