@@ -53,7 +53,7 @@
 				<h1>Features</h1>
 			</div>
 
-			<ul>
+			<ul class="card-content-list">
 				<li>Preemptive scheduling</li>
 				<li>Mouse and keyboard</li>
 				<li>IPC - shared memory, message passing and pipes</li>
@@ -76,18 +76,18 @@
 					<div id="release-list-div"></div>
 				</div>
 
-				<div class="ghost-card blue">
-					<h1> Running on QEMU </h1>
+				<div class="ghost-card white">
+					<h3>Running on QEMU</h3>
 
-					<p>
+					<p class="mb-sep">
 						QEMU is the prefered platform for testing the operating system.
 					</p>
 
 					<div class="code">qemu-system-i386 -cdrom bootdisk.iso -m 256M -enable-kvm -serial mon:stdio</div>
 				</div>
 
-				<div class="ghost-card blue">
-					<h1>Running on VirtualBox</h1>
+				<div class="ghost-card white">
+					<h3>Running on VirtualBox</h3>
 
 					<ul>
 						<li>Other/Unknown operating system type</li>
