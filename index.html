@@ -2,90 +2,99 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <title>skiftOS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="normalize.css" />
-    <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+	<meta charset="utf-8" />
+	<title>skiftOS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" media="screen" href="normalize.css" />
+	<link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+	<!-- Social meta -->
+	<meta property="og:site_name" content="skiftOS">
+	<meta property="og:title" content="skiftOS">
+	<meta property="og:description" content="A simple, handmade, operating system for the intel x86 cpu.">
+	<meta property="og:image" content="https://skiftos.github.io/assets/capture.png">
+	<meta property="og:url" content="https://skiftos.github.io/">
+	<meta name="twitter:image:alt" content="Screenshot of skiftOS">
+	<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body>
-    <div class="header">
-        <div class="menu raised header-container">
-            <div class="container d-flex">
-                <img class="logo" src="assets/logo-white.png" />
-                <span class="desktop-only list-items">
-                    <!-- <a href="#news" class="menu-item">News</a> -->
-                    <a href="#features" class="menu-item">Features</a>
-                    <a href="#relases" class="menu-item">Releases</a>
-                    <a href="https://github.com/skiftOS/skift" class="menu-item">Source code</a>
-                </span>
-            </div>
-        </div>
-    </div>
-    <div class="mobile-menu raised mobile-only">
-        <a href="#news" class="menu-item">News</a>
-        <a href="#about" class="menu-item">About</a>
-        <a href="#relases" class="menu-item">Releases</a>
-        <a href="#source" class="menu-item">Source code</a>
-    </div>
+	<div class="header">
+		<div class="menu raised header-container">
+			<div class="container d-flex">
+				<img class="logo" src="assets/logo-white.png" />
+				<span class="desktop-only list-items">
+					<!-- <a href="#news" class="menu-item">News</a> -->
+					<a href="#features" class="menu-item">Features</a>
+					<a href="#relases" class="menu-item">Releases</a>
+					<a href="https://github.com/skiftOS/skift" class="menu-item">Source code</a>
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-menu raised mobile-only">
+		<a href="#news" class="menu-item">News</a>
+		<a href="#about" class="menu-item">About</a>
+		<a href="#relases" class="menu-item">Releases</a>
+		<a href="#source" class="menu-item">Source code</a>
+	</div>
 
-    <div class="container">
+	<div class="container">
 
-        <div class="card image">
-            <img src="assets/capture.png" />
-            <div class="image-description">skiftOS running on QEMU 2.11</div>
-        </div>
+		<div class="card image">
+			<img src="assets/capture.png" />
+			<div class="image-description">skiftOS running on QEMU 2.11</div>
+		</div>
 
-        <div class="card" id="features">
-            <div class="card-header">
-                <h1>Features</h1>
-            </div>
+		<div class="card" id="features">
+			<div class="card-header">
+				<h1>Features</h1>
+			</div>
 
-            <ul>
-                <li>Preemptive scheduling</li>
-                <li>Mouse and keyboard</li>
-                <li>IPC - shared memory, message passing and pipes</li>
-                <li>coreutils - ls, cat, sh, ...</li>
-            </ul>
-        </div>
+			<ul>
+				<li>Preemptive scheduling</li>
+				<li>Mouse and keyboard</li>
+				<li>IPC - shared memory, message passing and pipes</li>
+				<li>coreutils - ls, cat, sh, ...</li>
+			</ul>
+		</div>
 
-        <div id="relases" class="card">
-            <div class="card-header">
-                <h1>Releases</h1>
-            </div>
+		<div id="relases" class="card">
+			<div class="card-header">
+				<h1>Releases</h1>
+			</div>
 
-            <div class="card-content">
-                <ul id="releases-list">
-                </ul>
+			<div class="card-content">
+				<ul id="releases-list">
+				</ul>
 
-                <div class="ghost-card blue">
-                    <h1> Running on QEMU </h1>
+				<div class="ghost-card blue">
+					<h1> Running on QEMU </h1>
 
-                    <p>
-                        QEMU is the prefered platform for testing the operating system.
-                    </p>
+					<p>
+						QEMU is the prefered platform for testing the operating system.
+					</p>
 
-                    <div class="code">qemu-system-i386 -cdrom bootdisk.iso -m 1G -enable-kvm</div>
-                </div>
+					<div class="code">qemu-system-i386 -cdrom bootdisk.iso -m 1G -enable-kvm</div>
+				</div>
 
-                <div class="ghost-card blue">
-                    <h1>Running on VirtualBox</h1>
+				<div class="ghost-card blue">
+					<h1>Running on VirtualBox</h1>
 
-                    <ul>
-                        <li>Other/Unknow operating system type</li>
-                        <li>At least 128Mib of ram</li>
-                        <li>No harddrive needed</li>
-                        <li>With hardware acceleration</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+					<ul>
+						<li>Other/Unknow operating system type</li>
+						<li>At least 128Mib of ram</li>
+						<li>No harddrive needed</li>
+						<li>With hardware acceleration</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <script src="main.js"></script>
+	<script src="main.js"></script>
 
 </body>
 
