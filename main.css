@@ -4,9 +4,14 @@ html {
 
 body
 {
+    --theme-background0: 34, 34, 34;
+    --theme-background1: 51, 51, 51;
+    --theme-background2: 69, 69, 69;
+    --theme-background3: 0, 102, 255;
+
     font-family: 'Jost';
 
-    background-color: #222;
+    background-color: rgb(var(--theme-background0));
     color: white;
     margin: 0 !important;
     padding: 0 !important;
@@ -31,10 +36,10 @@ body
     margin: 0 auto;
     width: 100%;
     border-radius: 0px;
-    margin-bottom: 16px;
-    background: #333333f9;
+    margin-bottom: 12px;
+    background: rgba(var(--theme-background1), 0.95); 
     box-shadow: 0 1px 0px rgba(255,255,255,0.1);
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(12px);
 }
 
 .logo {
@@ -95,9 +100,9 @@ body
 
 .mobile-menu
 {
-    background: #333333;
-    padding: 16px;
-    margin-bottom: 16px;
+    background: rgb(var(--theme-background0));
+    padding: 12px;
+    margin-bottom: 12px;
 }
 
 .menu img
@@ -128,14 +133,14 @@ body
 .menu-item:hover
 {
     color:white;
-    background-color: #06f;
+    background-color: rgb(var(--theme-background3));
 }
 
 .dl-item
 {
     display: flex;
     border-radius: 8px;
-    padding: 8px 16px;
+    padding: 8px 12px;
     vertical-align: middle;
     text-transform: uppercase;
     color: white;
@@ -157,7 +162,7 @@ body
 
 .code
 {
-    background: #444444;
+    background: rgb(var(--theme-background2));
     border: 1px solid #555555;
     border-radius: 4px;
     color: white;
@@ -174,7 +179,7 @@ body
 
 .link-download
 {
-    padding: 0px 16px;
+    padding: 0px 12px;
     text-align: left;
 }
 
@@ -194,27 +199,27 @@ body
 
 .card
 {
-    background-color: #333333;
-    border-radius: 4px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    margin-bottom: 16px;
+    background-color: rgb(var(--theme-background1));
+    border-radius: 6px;
+    margin-bottom: 12px;
     overflow: hidden;
 }
 
 .card-header
 {
-    background: #444444;
-    padding: 16px 24px 16px 24px;
+    background: rgb(var(--theme-background2));
+    padding: 12px 24px 12px 24px;
+    margin-bottom: 12px;
 }
 
 .card-content
 {
-    padding: 0px 24px 24px 24px;
+    padding: 0px 12px 0px 12px;
 }
 
 .card-content-list
 {
-    padding: 16px 48px;
+    padding: 12px 48px;
 }
 
 .card h1
@@ -230,8 +235,8 @@ body
     border-style: solid;
     border-radius: 4px;
 
-    padding: 16px 24px;
-    margin-top: 8px;
+    padding: 12px 24px;
+    margin-bottom: 12px;
 
     border-color:dimgrey;
     color: dimgrey;
@@ -245,9 +250,9 @@ body
 /* release card */
 .card-release 
 {
-    background: #0066FF;
-    padding: 16px 24px;
-    margin-top: 24px;
+    background: rgb(var(--theme-background3));
+    padding: 12px 24px;
+    margin-bottom: 12px;
 }
 
 #release-list-div
@@ -297,5 +302,5 @@ body
 }
 
 .overable:hover {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.23);
 }
