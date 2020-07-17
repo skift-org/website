@@ -6,29 +6,13 @@ body
 {
     font-family: 'Jost';
 
-    background-color: #333333;
+    background-color: #222;
     color: white;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span
-{
-    margin: 0;
-}
 
-ul,
-ol
-{
-    margin: 0;
-}
 
 .d-flex
 {
@@ -54,7 +38,7 @@ ol
 }
 
 .logo {
-    height: 24px;
+    height: 32px;
     display: inline-block;
 }
 
