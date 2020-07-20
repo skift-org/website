@@ -13,7 +13,8 @@
 	<!-- Social meta -->
 	<meta property="og:site_name" content="skiftOS">
 	<meta property="og:title" content="skiftOS">
-	<meta property="og:description" content="skiftOS is a hobby operating system built for learning and for fun targeting the x86 platform. It features a kernel named hjert, a graphical user interface with a compositing window manager, and familiar UNIX utilities.">
+	<meta property="og:description"
+		content="skiftOS is a hobby operating system built for learning and for fun targeting the x86 platform. It features a kernel named hjert, a graphical user interface with a compositing window manager, and familiar UNIX utilities.">
 	<meta property="og:image" content="https://skiftos.github.io/assets/capture.png">
 	<meta property="og:url" content="https://skiftos.github.io/">
 	<meta name="twitter:image:alt" content="Screenshot of skiftOS">
@@ -29,7 +30,7 @@
 					<!-- <a href="#news" class="menu-item">News</a> -->
 					<a href="#features" class="menu-item">Features</a>
 					<a href="#relases" class="menu-item">Releases</a>
-					<a href="https://github.com/skiftOS/skift" class="menu-item">Source code</a>
+					<a href="https://github.com/skiftOS/skift" class="menu-item">Source code ↗</a>
 				</span>
 			</div>
 		</div>
@@ -38,14 +39,24 @@
 		<a href="#news" class="menu-item">News</a>
 		<a href="#about" class="menu-item">About</a>
 		<a href="#relases" class="menu-item">Releases</a>
-		<a href="#source" class="menu-item">Source code</a>
+		<a href="https://github.com/skiftOS/skift" class="menu-item">Source code ↗</a>
 	</div>
 
 	<div class="container">
+		<div class="card" id="features">
+			<div class="card-header">
+				<h1>About</h1>
+			</div>
+
+			<div class="card-content-text">
+				skiftOS is a hobby operating system built for learning and for fun targeting the x86 platform. It
+				features a kernel named hjert, a graphical user interface with a compositing window manager, and
+				familiar UNIX utilities.
+			</div>
+		</div>
 
 		<div class="card image">
-			<img src="assets/capture.png" />
-			<div class="image-description">skiftOS running on QEMU 2.11</div>
+			<img style="display: block;" src="assets/capture.png" />
 		</div>
 
 		<div class="card" id="features">
@@ -54,11 +65,24 @@
 			</div>
 
 			<ul class="card-content-list">
-				<li>Preemptive scheduling</li>
-				<li>Mouse and keyboard</li>
-				<li>IPC - shared memory, message passing and pipes</li>
-				<li>coreutils - ls, cat, sh, ...</li>
+				<li>Pre-emptive multitasking</li>
+				<li>I/O redirection</li>
+				<li>IPC sockets</li>
+				<li>Low level utility and system library (libsystem)</li>
+				<li>2D and 3D graphic library (libgraphic)</li>
+				<li>PNG support through lodepng</li>
+				<li>Graphical user interface library (libwidget)</li>
+				<li>A compositing window manager (Compositor)</li>
+				<li>Posix and libc compatibility layer library (libcompat)</li>
+				<li>A terminal emulator which support unicode and vt100 escape sequence (Terminal)</li>
+				<li>It can run DOOM <img height="16px" src="assets/rage3.png" /> </li>
 			</ul>
+		</div>
+
+		<div class="card">
+			<iframe style="display: block;" width="720" height="405" src="https://www.youtube.com/embed/KoBp-sCe6Xo"
+				frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
 		</div>
 
 		<div id="relases" class="card">
