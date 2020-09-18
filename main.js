@@ -33,7 +33,7 @@ function update_releases()
         }
 
         release_list_content += `<a href="${release["tarball_url"]}" class="dl-item"><span class="material-icons icon-dl">topic</span>tarball</a>`;
-        release_list_content += `<a href="${release["zipball_url"]}" class="dl-item"><span class="material-icons icon-dl">topic</span>zipball</a>`;
+        release_list_content += `<a href="${release["zipball_url"]}" class="dl-item"><span class="material-icons icon-dl">topic</span>zip</a>`;
 
         release_list_div.innerHTML += release_list_content
 
