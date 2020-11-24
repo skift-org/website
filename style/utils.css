@@ -1,0 +1,44 @@
+.d-flex
+{
+    display: flex;
+}
+
+.mb-sep
+{
+    margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 720px)
+{
+    .mobile-only
+    {
+        display: none;
+    }
+
+    .desktop-only {
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .container
+    {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .header{
+        width: 100%;
+        margin: 0;
+    }
+
+    .menu-item{
+        display: block;
+    }
+
+    .mobile-only {
+    }
+
+    .desktop-only {
+        display: none;
+    }
+}
