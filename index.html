@@ -50,11 +50,19 @@
 
 	nav {
 		display: flex;
+		gap: 1rem;
+		justify-content: center;
+	}
+
+	@media only screen and (max-width: 600px) {
+		nav {
+			flex-direction: column;
+			gap: 0rem;
+		}
 	}
 
 	a {
 		font-family: 'Jost';
-		vertical-align: bottom;
 		text-decoration: none;
 
 		background-color: transparent;
@@ -92,14 +100,13 @@
 		<div style="display: flex; justify-content: center; margin-bottom: 1rem;">
 			<img src="cover.webp" alt="" />
 		</div>
-
 	</section>
-	<div style="display: flex; gap: 1rem; justify-content: center;">
+	<nav>
 		<a href="#about">About </a>
 		<a href="#features">Features </a>
 		<a href="#community">Community </a>
 		<a href="#relases">Releases </a>
-	</div>
+	</nav>
 	<section id="about">
 		<h1>
 			About
