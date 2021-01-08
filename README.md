@@ -1,2 +1,3 @@
-# skiftos.github.io
+# skiftos.org
+
 The Skift Operating System Website.

@@ -1,131 +1,248 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8" />
 	<title>skiftOS</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" media="screen" href="normalize.css" />
-	<link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8">
-	<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="style/utils.css" />
 
-	<!-- Social meta -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
+	<link href="https://indestructibletype.com/fonts/Jost.css" rel="stylesheet">
+
 	<meta property="og:site_name" content="skiftOS">
 	<meta property="og:title" content="skiftOS">
+	<meta name="Description"
+		content="skiftOS is a hobby operating system built for learning and for fun targeting the x86 platform. It features a kernel named hjert, a graphical user interface with a compositing window manager, and familiar UNIX utilities.">
 	<meta property="og:description"
 		content="skiftOS is a hobby operating system built for learning and for fun targeting the x86 platform. It features a kernel named hjert, a graphical user interface with a compositing window manager, and familiar UNIX utilities.">
-	<meta property="og:image" content="https://skiftos.github.io/assets/capture.png">
-	<meta property="og:url" content="https://skiftos.github.io/">
+	<meta property="og:image" content="https://skiftos.org/capture.png">
+	<meta property="og:url" content="https://skiftos.org/">
+
 	<meta name="twitter:image:alt" content="Screenshot of skiftOS">
 	<meta name="twitter:card" content="summary_large_image">
 </head>
 
+<style>
+	body {
+		font-family: sans-serif;
+		scroll-behavior: smooth;
+		color: #333;
+	}
+
+	h1 {
+		font-family: 'Jost';
+		font-weight: 400;
+		color: #000;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		border-radius: 8px;
+		overflow: hidden;
+	}
+
+	section {
+		padding: 0 1rem 0 1rem;
+		max-width: 720px;
+		margin: 0 auto;
+	}
+
+	nav {
+		display: flex;
+	}
+
+	a {
+		font-family: 'Jost';
+		vertical-align: bottom;
+		text-decoration: none;
+
+		background-color: transparent;
+		color: #06f;
+
+		display: block;
+		padding: 0.5rem 1rem;
+		margin: 0.5rem 0;
+		border-radius: 0.5rem;
+
+		border: solid 1px #06f4;
+	}
+
+	a:hover {
+		background-color: #06f4;
+	}
+
+	.code {
+		font-family: monospace;
+		background-color: #F3F4F6;
+		border: solid 1px #E5E7EB;
+		padding: 1rem;
+		border-radius: 0.5rem;
+	}
+
+	.material-icons {
+		vertical-align: bottom;
+		font-size: 24px !important;
+		padding-right: 0.25rem;
+	}
+</style>
+
 <body>
-	<div class="header">
-		<div class="menu header-container">
-			<div class="container d-flex">
-				<img class="logo" src="assets/logo-white.png" />
-				<span class="desktop-only list-items">
-					<a href="#features" class="menu-item">Features</a>
-					<a href="#relases" class="menu-item">Releases</a>
-					<a href="https://github.com/skiftOS/skift" class="menu-item">Source code ↗</a>
-				</span>
-			</div>
-		</div>
-	</div>
-	<div class="mobile-menu raised mobile-only">
-		<a href="#features" class="menu-item">Features</a>
-		<a href="#relases" class="menu-item">Releases</a>
-		<a href="https://github.com/skiftOS/skift" class="menu-item">Source code ↗</a>
-	</div>
-
-	<div class="container">
-		<div class="card" id="features">
-			<div class="card-header">
-				<h1>About</h1>
-			</div>
-
-			<div class="card-content-text">
-				skiftOS is a hobby operating system built for learning and for fun targeting the x86 platform. It
-				features a kernel named hjert, a graphical user interface with a compositing window manager, and
-				familiar UNIX utilities.
-			</div>
+	<section>
+		<div style="display: flex; justify-content: center; margin-bottom: 1rem;">
+			<img src="cover.png" alt="" />
 		</div>
 
-		<div class="card image">
-			<img style="display: block;" src="assets/capture.png" />
+		<div style="display: flex; gap: 1rem; justify-content: center;">
+			<a href="#about">About </a>
+			<a href="#features">Features </a>
+			<a href="#community">Community </a>
+			<a href="#relases">Releases </a>
+			<a href="https://github.com/skiftOS/skift" target="_blank" rel="noopener"> Source Code ↗ </a>
+		</div>
+	</section>
+	<section id="about">
+		<h1>
+			About
+		</h1>
+
+		<p>
+			skiftOS is a hobby operating system built for learning and for fun targeting the x86 platform. It
+			features a kernel named hjert, a graphical user interface with a compositing window manager, and
+			familiar UNIX utilities.
+		</p>
+	</section>
+
+	<section id="media">
+		<img src="capture.png" alt="" />
+	</section>
+
+	<section id="features">
+		<h1>Features</h1>
+
+		<ul>
+			<li>Pre-emptive multitasking</li>
+			<li>I/O redirection</li>
+			<li>IPC sockets</li>
+			<li>Low level utility and system library (libsystem)</li>
+			<li>2D and 3D graphic library (libgraphic)</li>
+			<li>PNG support through lodepng</li>
+			<li>Graphical user interface library (libwidget)</li>
+			<li>A compositing window manager (Compositor)</li>
+			<li>Posix and libc compatibility layer library (libcompat)</li>
+			<li>A terminal emulator which support unicode and vt100 escape sequence (Terminal)</li>
+		</ul>
+	</section>
+
+	<section id="community">
+		<h1>
+			Community
+		</h1>
+
+		<a href="discord.skiftos.org" target="_blank" rel="noopener">Discord ↗</a>
+		<a href="https://www.reddit.com/r/skift/" target="_blank" rel="noopener">Reddit ↗</a>
+		<a href="https://github.com/skiftOS" target="_blank" rel="noopener">GitHub ↗</a>
+		<a href="https://twitter.com/search?q=%23skiftos" target="_blank" rel="noopener">#skiftOS on Twitter ↗</a>
+	</section>
+
+	<section id="relases">
+		<h1>
+			Latest Release
+		</h1>
+
+		<span
+			style="display: inline-block; font-family: 'jost'; background-color: #06f; color: white; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+			<span style="font-weight: bold; font-size: 18pt;">skiftOS</span> <span id="release-name"> </span>
+		</span>
+
+		<div id="release-links">
 		</div>
 
-		<div class="card" id="features">
-			<div class="card-header">
-				<h1>Features</h1>
-			</div>
+		<a href="https://github.com/skiftOS/skift/releases" style="margin-top: 1.5rem;" target="_blank" rel="noopener">All Releases ↗</a>
+	</section>
 
-			<div class="card-content-list">
-				<ul>
-					<li>Pre-emptive multitasking</li>
-					<li>I/O redirection</li>
-					<li>IPC sockets</li>
-					<li>Low level utility and system library (libsystem)</li>
-					<li>2D and 3D graphic library (libgraphic)</li>
-					<li>PNG support through lodepng</li>
-					<li>Graphical user interface library (libwidget)</li>
-					<li>A compositing window manager (Compositor)</li>
-					<li>Posix and libc compatibility layer library (libcompat)</li>
-					<li>A terminal emulator which support unicode and vt100 escape sequence (Terminal)</li>
-				</ul>
-			</div>
-		</div>
+	<section id="running-on-qemu">
+		<h1>Running on QEMU</h1>
 
-		<div class="card">
-			<iframe style="display: block;" width="720" height="405" src="https://www.youtube.com/embed/KoBp-sCe6Xo"
-				frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen></iframe>
-		</div>
+		<p>
+			QEMU is the prefered platform for testing the operating system.
+			Running GRUB base images required this command:
+		</p>
 
-		<div id="relases" class="card">
-			<div class="card-header">
-				<h1>Releases</h1>
-			</div>
 
-			<div class="card-content">
+		<div class="code">qemu-system-x86_64 -cdrom bootdisk-grub-x86_32.img -m 256M -enable-kvm -serial stdio -display
+			sdl</div>
+		</p>
 
-				<div class="card card-release">
-					<div class="release-info">
-						<h3>Latest release</h3>
-						<h4 id="latest-release-name" class="latest-release-lbl"></h4>
-					</div>
-					<div id="release-list-div"></div>
-				</div>
+		<p>
+			Limine base images required another command:
+		<div class="code">qemu-system-x86_64 -hdd bootdisk-limine-x86_32.img -m 256M -enable-kvm -serial stdio -display
+			sdl</div>
+		</p>
+	</section>
 
-				<div class="ghost-card white">
-					<h3>Running on QEMU</h3>
+	<section id="running-on-vbox">
+		<h1>Running on Virtual Box</h1>
 
-					<p class="mb-sep">
-						QEMU is the prefered platform for testing the operating system.
-					</p>
+		Running skiftOS in Virtual Box required:
+		<ul>
+			<li>Other/Unknown operating system type</li>
+			<li>At least 128MiB of ram</li>
+			<li>No hard drive needed</li>
+			<li>With hardware acceleration</li>
+		</ul>
+	</section>
 
-					<div class="code">qemu-system-x86_64 -cdrom bootdisk.iso -m 256M -enable-kvm -serial stdio</div>
-				</div>
+	<section id="running-for-real">
+		<h1>Running on Real Hardware</h1>
 
-				<div class="ghost-card white">
-					<h3>Running on VirtualBox</h3>
+		Running skiftOS real hardware required:
+		<ul>
+			<li>Working bios PS/2 emulation.</li>
+			<li>At least 256mb of ram (512mb recomended)</li>
+		</ul>
+	</section>
 
-					<ul>
-						<li>Other/Unknown operating system type</li>
-						<li>At least 128MiB of ram</li>
-						<li>No hard drive needed</li>
-						<li>With hardware acceleration</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+	<section id="license">
+		<h1>License</h1>
+		The skift operating system and its core components are licensed under the MIT License.
+	</section>
 
-	<script src="main.js"></script>
+	<script>
+		function update_releases() {
+			let releases_list = document.getElementById("releases-list")
 
+			let latest_release_name = document.getElementById("release-name")
+			let release_list_div = document.getElementById("release-links")
+
+			fetch('https://api.github.com/repos/skiftOS/skift/releases/latest')
+				.then(res => res.json())
+				.then((out) => {
+
+					let release = out;
+
+					let release_list_content = ""
+
+					latest_release_name.innerHTML = release["tag_name"];
+
+					for (const keyAsset in release["assets"]) {
+						let asset = release["assets"][keyAsset];
+
+						release_list_content += `<a href="${asset["browser_download_url"]}"><span class="material-icons">album</span>${asset["name"]}</a>`;
+					}
+
+					release_list_content += `<a href="${release["tarball_url"]}" style="margin-top: 1.5rem;"><span class="material-icons">folder</span>tarball</a>`;
+					release_list_content += `<a href="${release["zipball_url"]}"><span class="material-icons">folder</span>zip</a>`;
+
+					release_list_div.innerHTML += release_list_content
+
+				}).catch(err => releases_list.innerHTML = "Failled to fetch releases... sorry :/");
+		}
+
+		update_releases();
+	</script>
 </body>
+
 
 </html>
