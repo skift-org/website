@@ -27,13 +27,14 @@
 	body {
 		font-family: sans-serif;
 		scroll-behavior: smooth;
-		color: #333;
+		background-color: #18181B;
+		color: #fff;
 	}
 
 	h1 {
 		font-family: 'Jost';
 		font-weight: 400;
-		color: #000;
+		color: #fff;
 	}
 
 	img {
@@ -73,7 +74,7 @@
 		margin: 0.5rem 0;
 		border-radius: 0.5rem;
 
-		border: solid 1px #06f4;
+		border: solid 2px #06f4;
 	}
 
 	a:hover {
@@ -82,8 +83,8 @@
 
 	.code {
 		font-family: monospace;
-		background-color: #F3F4F6;
-		border: solid 1px #E5E7EB;
+		background-color: rgb(30, 32, 34);
+		border: solid 2px rgb(54, 59, 61);
 		padding: 1rem;
 		border-radius: 0.5rem;
 	}
@@ -178,7 +179,8 @@
 		</p>
 
 
-		<div class="code">qemu-system-x86_64 -cdrom bootdisk-grub-x86_32.img -rtc base=localtime,clock=vm -m 256M -enable-kvm -serial stdio -display
+		<div class="code">qemu-system-x86_64 -cdrom bootdisk-grub-x86_32.img -rtc base=localtime,clock=vm -m 256M
+			-enable-kvm -serial stdio -display
 			sdl</div>
 		</p>
 
