@@ -1,8 +1,8 @@
 function Hero() {
     return<div className="flex flex-col items-center">
-        <div className="flex items-center flex-col lg:flex-row max-w-screen-xl m-auto p-4">
+        <div className="flex items-center flex-col md:flex-row max-w-screen-xl">
             <embed className="max-w-xl w-full" src="laptop.png"/>
-            <div className="flex flex-col items-start max-w-md">
+            <div className="flex flex-col items-start max-w-md p-4">
                 <div className="text-4xl font-extrabold mb-4">
                     skiftOS
                 </div>
@@ -12,8 +12,11 @@ function Hero() {
                 </div>
 
                 <a className="button" href="https://github.com/skiftOS/skift/releases">
-                    Download the Latest Release
+                    Download the Latest Release*
                 </a>
+                <div className="text-xs pt-8">
+                * skiftOS is alpha quality software use it at your own risks
+                </div>
             </div>
         </div>
     </div>

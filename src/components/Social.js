@@ -8,10 +8,10 @@ function SocialItem(props) {
 function Social() {
     return<div className="bg-gray-900 p-16">
     <div className="flex flex-col items-center">
-        <div className="text-2xl font-extrabold mb-8">
+        <div className="title">
             Join the Community!
         </div>
-        <div className="flex flex-col lg:flex-row gap-16">
+        <div className="flex flex-col md:flex-row gap-16">
             <SocialItem image="github.svg" name="Github" href="https://github.com/skiftOS/skift"/>
             <SocialItem image="discord.svg" name="Discord" href="http://discord.skiftos.org/"/>
             <SocialItem image="reddit.svg" name="Reddit" href="https://www.reddit.com/r/skift"/>
