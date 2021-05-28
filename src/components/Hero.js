@@ -8,14 +8,14 @@ function Hero() {
                 </div>
 
                 <div className="mb-4">
-                    An hobby operating system built from scratch in modern C++, featuring a reactive UI library, and a strong emphasis on user experience. 
+                    A hobby operating system built from scratch in modern C++. Featuring a reactive UI library and a strong emphasis on user experience.
                 </div>
 
                 <a className="button" href="https://github.com/skiftOS/skift/releases">
                     Download the Latest Release*
                 </a>
                 <div className="text-xs pt-8">
-                * skiftOS is alpha quality software use it at your own risks
+                    * skiftOS is alpha software use it at your own risks
                 </div>
             </div>
         </div>

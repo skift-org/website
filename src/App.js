@@ -4,15 +4,15 @@ import Social from './components/Social'
 import Footer from './components/Footer'
 import Features from './components/Features'
 import Contribute from './components/Contribute'
-import About from './components/About'
 import Download from './components/Download'
+import Goals from './components/Goals'
 
 function App() {
   return (
     <div>
       <NavBar />
       <Hero />
-      <About/>
+      <Goals/>
       <Contribute/>
       <Features />
       <Download/>

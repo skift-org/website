@@ -7,7 +7,7 @@ function Contribute() {
                         Join the effort!
                     </div>
                     <div>
-                    The skift operating system is open source.
+                        The skift operating system is open source.
                     </div>
                     <div>
                         We welcome contributions.

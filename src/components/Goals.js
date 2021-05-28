@@ -1,4 +1,4 @@
-function About() {
+function Goals() {
     return <div className="bg-white text-black flex flex-col items-center px-4 py-4 md:py-16">
         <div className="flex items-center flex-col md:flex-row gap-8">
             <div className="md:hidden flex flex-col items-center max-w-md">
@@ -19,7 +19,7 @@ function About() {
                 </p>
 
                 <p className="mt-4">
-                    The goal is not to create the next Windows, but to have fun with programming, to sharpen my skills, learn the details of the architecture and implementation of OS, and create a system that I like! Because modern operating systems have become platforms for selling apps and collecting data.
+                    The goal is not to create the new Windows, but to have fun with programming,  sharpen my skills, learn the inner working of an OS, and create a system that I like!
                 </p>
             </div>
 
@@ -30,4 +30,4 @@ function About() {
     </div>
 }
 
-export default About
+export default Goals

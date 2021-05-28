@@ -11,7 +11,7 @@ function Download() {
         </div>
 
         <div className="text-xs pt-8">
-            * skiftOS is alpha quality software use it at your own risks
+            * skiftOS is alpha software use it at your own risks
         </div>
     </div>
 }
