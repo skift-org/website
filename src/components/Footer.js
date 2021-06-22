@@ -5,7 +5,7 @@ function Footer() {
             Copyright © 2018-2021 N. Van Bossuyt & contributors.
         </div>
         <div>
-            All rights reserved.
+            All rights reserved. <a href="https://github.com/skiftOS/website"> Source code </a>
         </div>
     </div>
 }
