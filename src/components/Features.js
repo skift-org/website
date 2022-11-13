@@ -29,7 +29,7 @@ function Unix() {
 }
 
 function App(props) {
-    return <div className="flex flex-col items-center capitalize w-16 md:w-32">
+    return <div className="flex flex-col items-center text-center capitalize w-16 md:w-32">
         <img src={"apps/" + props.name + ".png"} alt=""/>
         {props.name.replace('-', ' ')}
     </div>
