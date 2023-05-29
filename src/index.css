@@ -9,3 +9,7 @@
 .button {
     @apply rounded px-4 py-2 bg-blue-600 hover:bg-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50;
 }
+
+.button-secondary {
+    @apply rounded px-4 py-2 bg-gray-600 hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-gray-600 focus:ring-opacity-50;
+}
