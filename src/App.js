@@ -5,20 +5,32 @@ function Title({ children }) {
   </h1>
 }
 
+function Subtitle({ children }) {
+  return <h2 className="text-2xl font-bold mb-4">
+    {children}
+  </h2>
+}
+
 function Link({ children, ...props }) {
   return <a className="text-blue-500 hover:underline" {...props}>
     {children}
   </a>
 }
 
-function TwoColumns({ children }) {
-  return <section className="flex flex-col xl:grid xl:grid-cols-2 max-w-screen-xl px-4 py-8 md:p-24 m-auto gap-12 xl:gap-8">
+function TwoColumnsSection({ id, children, className }) {
+  return <section id={id} className={"flex flex-col xl:grid xl:grid-cols-2 max-w-screen-xl px-4 py-8 md:p-24 m-auto gap-12 xl:gap-8 " + className}>
     {children}
   </section>
 }
 
-function Section({ children }) {
-  return <section className="max-w-screen-xl px-4 py-8 md:p-24 m-auto gap-12 xl:gap-8">
+function TwoColumns({ children, className }) {
+  return <section className={"flex flex-col xl:grid xl:grid-cols-2 gap-12 xl:gap-8 pt-8 " + className}>
+    {children}
+  </section>
+}
+
+function Section({ id, children, className }) {
+  return <section id={id} className={"max-w-screen-xl px-4 py-8 md:p-24 m-auto gap-12 xl:gap-8 " + className}>
     {children}
   </section>
 }
@@ -30,15 +42,20 @@ function Separator() {
 /* --- Sections ------------------------------------------------------------- */
 
 function NavBar() {
-  return <section className="top-0 px-8 py-6 bg-zinc-950 bg-opacity-70 border-b border-white border-opacity-10 backdrop-filter backdrop-blur">
+  return <nav className="sticky top-0 px-8 py-6 bg-gray-950 bg-opacity-70 border-b border-white border-opacity-10 backdrop-filter backdrop-blur">
     <div className="flex gap-4 items-center max-w-screen-xl m-auto">
       <img className="max-h-6" src="logo.svg" alt="" />
+      <div className="flex-grow"></div>
+      <Link href="#goal">Goal</Link>
+      <Link href="#features">Features</Link>
+      <Link href="#technologies">Technologies</Link>
+      <Link href="#community">Community</Link>
     </div>
-  </section>
+  </nav>
 }
 
 function Hero() {
-  return <TwoColumns>
+  return <TwoColumnsSection>
     <img class="p-8" src="laptop.png" alt="" />
     <div>
       <Title>Skift</Title>
@@ -60,16 +77,16 @@ function Hero() {
         * skiftOS is alpha software, use it at your own risk.
       </span>
     </div>
-  </TwoColumns>
+  </TwoColumnsSection>
 }
 
 function Goals() {
-  return <TwoColumns>
+  return <TwoColumnsSection id="goal">
     <div>
       <Title>Goal</Title>
 
       <div className="text-gray-400 mb-4">
-        Written by <img className="inline-block h-6 rounded-full" src="me.jpg" alt="" /> sleepy-monax
+        Written by <Link href="https://github.com/sleepy-monax"><img className="inline-block h-6 rounded-full me-1" src="me.jpg" alt="" />sleepy-monax</Link>
       </div>
 
       <p className="mb-4">
@@ -77,12 +94,12 @@ function Goals() {
       </p>
 
       <p className="mt-4">
-        The goal is not to create the new Windows, but to have fun with programming,  sharpen my skills, learn the inner working of an OS, and create a system that I like!
+        The goal is not to create the new Windows, but to have fun with programming, sharpen my skills, learn the inner working of an OS, and create a system that I like!
       </p>
     </div>
 
     <img className="rounded" src="capture2.png" alt="" />
-  </TwoColumns>
+  </TwoColumnsSection>
 }
 
 
@@ -94,17 +111,33 @@ function App(props) {
   </div>
 }
 
+function Beautiful() {
+  return <TwoColumns>
+    <div>
+      <Subtitle>
+        Beautiful
+      </Subtitle>
+
+      <p>
+        skiftOS has a beautiful and modern user interface. It's designed to be simple, intuitive, and easy to use.
+      </p>
+    </div>
+    <img className="rounded" src="capture.png" alt="" />
+  </TwoColumns>
+}
+
 function Applications() {
   return <TwoColumns>
     <div>
-      <Title>
+      <Subtitle>
         Wide Range of Apps
-      </Title>
+      </Subtitle>
 
       <p>
         From productivity tools to entertainment apps, skiftOS has something for everyone. Whether you're a developer or an everyday user, skiftOS applications are crafted to enhance your experience and provide seamless functionality.
       </p>
     </div>
+
     <div className="flex justify-center flex-wrap gap-8 py-4">
       <App name="archive-manager" />
       <App name="calculator" />
@@ -122,51 +155,80 @@ function Applications() {
   </TwoColumns>
 }
 
-function Technologies() {
-  return <Section>
-    <Title>
-      Technologies
-    </Title>
+function RejectPosix() {
+  return <TwoColumns>
+    <div>
+      <Subtitle>
+        It's not a *NIX!
+      </Subtitle>
 
-    <div className="flex flex-col md:grid md:grid-cols-3 items-top gap-8 pt-4">
-      <div className="flex flex-col items-start gap-4">
-        <img src="techs/tech-karm.png" className="h-16" alt="" />
-
-        <div className="text-lg font-bold">
-          Modern Core Framework
-        </div>
-
-        <p>
-          A modern C++ core framework that make C++ delightful to use and provides a solid foundation for building applications and libraries.
-        </p>
-
-        <Link href="https://github.com/skift-org/skift/tree/main/src/libs">Source Code</Link>
-      </div>
-
-
-      <div className="flex flex-col items-start gap-4">
-        <img src="techs/tech-hjert.png" className="h-16" alt="" />
-        <div className="text-lg font-bold">
-          Capability-based Microkernel
-        </div>
-        <p>
-          A capability-based microkernel that provides security and modularity.
-        </p>
-        <Link href="https://github.com/skift-org/skift/tree/main/src/kernel">Source Code</Link>
-      </div>
-
-      <div className="flex flex-col items-start gap-4">
-        <img src="techs/tech-opstart.png" className="h-16" alt="" />
-        <div className="text-lg font-bold">
-          UEFI Bootloader
-        </div>
-        <p>
-          An UEFI bootloader that support a wide range of customizations with a beautiful graphical interface.
-        </p>
-        <Link href="https://github.com/skift-org/skift/tree/main/src/kernel/loader">Source Code</Link>
-      </div>
+      <p>
+        skiftOS is not a *NIX. It's a new system with a new API. It's not a Linux distribution, and it's not a Unix-like system. It's a new system inspired by 9front, Haiku, and Fuchsia.
+      </p>
     </div>
+    <div className="flex flex-col items-center gap-4">
+      <img className="h-56" src="nolinux.png" alt="" />
+    </div>
+  </TwoColumns>
+}
 
+
+
+function Features() {
+  return <Section id="features">
+    <Title>Features</Title>
+    <p>
+      While skiftOS is still in early development, it already has a wide range of features that make it a great choice for anyone looking for a modern, secure, and easy-to-use operating system.
+    </p>
+    <Beautiful />
+    <Applications />
+    <RejectPosix />
+  </Section>
+}
+
+function Tech({ icon, title, desc, link }) {
+  return <div className="flex flex-col items-start gap-4">
+    <img src={icon} className="max-h-16" alt="" />
+    <div className="text-lg font-bold">{title}</div>
+    <p>{desc}</p>
+    <Link href={link}>Source Code</Link>
+  </div>
+}
+
+function Technologies() {
+  return <Section id="technologies">
+    <Title>Technologies</Title>
+    <div className="flex flex-col md:grid md:grid-cols-3 items-top gap-8 pt-4">
+      <Tech
+        icon="techs/tech-karm.png"
+        title="Modern Core Framework"
+        desc="A modern C++ core framework that make C++ delightful to use and provides a solid foundation for building applications and libraries."
+        link="https://github.com/skift-org/skift/tree/main/src/libs" />
+
+      <Tech
+        icon="techs/tech-hjert.png"
+        title="Capability-based Microkernel"
+        desc="A capability-based microkernel that provides security and modularity."
+        link="https://github.com/skift-org/skift/tree/main/src/kernel" />
+
+      <Tech
+        icon="techs/tech-opstart.png"
+        title="UEFI Bootloader"
+        desc="An UEFI bootloader that support a wide range of customizations with a beautiful graphical interface."
+        link="https://github.com/skift-org/skift/tree/main/src/kernel/loader" />
+
+      <Tech
+        icon="techs/tech-hideo.png"
+        title="Graphical Shell"
+        desc="A responsive and beautiful graphical shell, supporting desktop and mobile devices."
+        link="https://github.com/skift-org/skift/tree/main/src/apps/shell-app" />
+
+      <Tech
+        icon="techs/tech-cutekit.png"
+        title="Multitarget Build System"
+        desc="A multitarget build system that support building for ARM, x86, and RISC-V."
+        link="https://github.com/cute-engineering/cutekit" />
+    </div>
   </Section >
 }
 
@@ -179,19 +241,19 @@ function SocialItem(props) {
 }
 
 function Social() {
-  return <div className="bg-gray-900 p-16">
+  return <Section id="community" className="bg-gray-900 p-16">
     <div className="flex flex-col items-center">
-      <div className="title">
+      <Title>
         Join the Community!
-      </div>
-      <div className="flex flex-col md:flex-row gap-16">
+      </Title>
+      <div className="grid grid-cols-2 md:flex md:flex-row gap-8 mt-8">
         <SocialItem image="github.svg" name="GitHub" href="https://github.com/skiftOS" />
         <SocialItem image="discord.svg" name="Discord" href="http://discord.skiftos.org/" />
         <SocialItem image="reddit.svg" name="Reddit" href="https://www.reddit.com/r/skift" />
         <SocialItem image="twitter.svg" name="Twitter" href="https://twitter.com/search?q=%23skiftOS" />
       </div>
     </div>
-  </div>
+  </Section>
 }
 
 function Footer() {
@@ -207,21 +269,19 @@ function Footer() {
 
 function Page() {
   return (
-    <div>
-      <div className="bg-cover bg-center" style={{ backgroundImage: "url(wallpaper.png)" }}>
-        <NavBar />
-        <Hero />
+    <div className="bg-cover bg-center bg-fixed" style={{ backgroundImage: "url(wallpaper.png)" }}>
+      <NavBar />
+      <Hero />
+      <div class="bg-gray-950">
+        <Separator />
+        <Goals />
+        <Separator />
+        <Features />
+        <Separator />
+        <Technologies />
+        <Social />
+        <Footer />
       </div>
-      <Separator />
-      <Goals />
-      <Separator />
-      <Applications />
-      <Separator />
-      <Technologies />
-      <Separator />
-      <Social />
-      <Separator />
-      <Footer />
     </div>
   );
 }
