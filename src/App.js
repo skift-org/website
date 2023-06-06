@@ -247,7 +247,7 @@ function Social() {
         Join the Community!
       </Title>
       <div className="grid grid-cols-2 md:flex md:flex-row gap-8 mt-8">
-        <SocialItem image="github.svg" name="GitHub" href="https://github.com/skiftOS" />
+        <SocialItem image="github.svg" name="GitHub" href="https://github.com/skift-org" />
         <SocialItem image="discord.svg" name="Discord" href="http://discord.skiftos.org/" />
         <SocialItem image="reddit.svg" name="Reddit" href="https://www.reddit.com/r/skift" />
         <SocialItem image="twitter.svg" name="Twitter" href="https://twitter.com/search?q=%23skiftOS" />
@@ -262,7 +262,7 @@ function Footer() {
     "The delightful operating system"<br />
     Copyright © 2018-2023 Cute Engineering<br />
     All rights reserved.<br />
-    <a href="https://github.com/skiftOS/website"> Source code</a>
+    <a href="https://github.com/skift-org/website"> Source code</a>
     <img className="w-10" src="glider.svg" alt="" />
   </div>
 }
