@@ -69,7 +69,7 @@ function Hero() {
           Contribute on GitHub
         </a>
 
-        <a className="button-secondary" href="https://github.com/skift-org/skift">
+        <a className="button-secondary" href="https://github.com/skift-org/skift/releases">
           Download the Latest Release*
         </a>
       </span>
