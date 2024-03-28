@@ -260,7 +260,7 @@ function Footer() {
   return <div className="text-center p-8 flex flex-col items-center gap-4">
     <img className="w-10" src="static/skift.svg" alt="" />
     "The delightful operating system"<br />
-    Copyright © 2018-2023 Cute Engineering<br />
+    Copyright © 2018-2024 Cute Engineering<br />
     All rights reserved.<br />
     <a href="https://github.com/skift-org/website"> Source code</a>
     <img className="w-10" src="static/glider.svg" alt="" />
