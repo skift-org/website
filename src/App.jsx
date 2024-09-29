@@ -203,7 +203,7 @@ function Technologies() {
         icon="static/techs/tech-karm.png"
         title="Modern Core Framework"
         desc="A modern C++ core framework that make C++ delightful to use and provides a solid foundation for building applications and libraries."
-        link="https://github.com/skift-org/skift/tree/main/src/libs" />
+        link="https://github.com/skift-org/karm" />
 
       <Tech
         icon="static/techs/tech-hjert.png"
@@ -215,13 +215,13 @@ function Technologies() {
         icon="static/techs/tech-opstart.png"
         title="UEFI Bootloader"
         desc="An UEFI bootloader that support a wide range of customizations with a beautiful graphical interface."
-        link="https://github.com/skift-org/skift/tree/main/src/kernel/loader" />
+        link="https://github.com/skift-org/skift/tree/main/src/kernel/opstart" />
 
       <Tech
         icon="static/techs/tech-hideo.png"
         title="Graphical Shell"
         desc="A responsive and beautiful graphical shell, supporting desktop and mobile devices."
-        link="https://github.com/skift-org/skift/tree/main/src/apps/shell-app" />
+        link="https://github.com/skift-org/hideo" />
 
       <Tech
         icon="static/techs/tech-cutekit.png"
