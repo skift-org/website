@@ -233,7 +233,7 @@ function Technologies() {
         icon="static/techs/tech-vaev.png"
         title="Browser Engine"
         desc="A lightning-fast, lightweight, and secure HTML/CSS engine for."
-        link="https://github.com/skift/tree/main/src/web" />
+        link="https://github.com/skift-org/skift/tree/main/src/web" />
     </div>
   </Section >
 }
