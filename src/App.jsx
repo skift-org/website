@@ -203,7 +203,7 @@ function Technologies() {
         icon="static/techs/tech-karm.png"
         title="Modern Core Framework"
         desc="A modern C++ core framework that make C++ delightful to use and provides a solid foundation for building applications and libraries."
-        link="https://github.com/skift-org/skift/tree/main/src/libs" />
+        link="https://github.com/skift-org/karm" />
 
       <Tech
         icon="static/techs/tech-hjert.png"
@@ -221,7 +221,7 @@ function Technologies() {
         icon="static/techs/tech-hideo.png"
         title="Graphical Shell"
         desc="A responsive and beautiful graphical shell, supporting desktop and mobile devices."
-        link="https://github.com/skift-org/skift/tree/main/src/apps" />
+        link="https://github.com/skift-org/hideo" />
 
       <Tech
         icon="static/techs/tech-cutekit.png"
@@ -233,7 +233,7 @@ function Technologies() {
         icon="static/techs/tech-vaev.png"
         title="Browser Engine"
         desc="A lightning-fast, lightweight, and secure HTML/CSS engine for."
-        link="https://github.com/skift/tree/main/src/web" />
+        link="https://github.com/skift-org/vaev" />
     </div>
   </Section >
 }
