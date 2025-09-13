@@ -90,11 +90,11 @@ function Goals() {
       </div>
 
       <p className="mb-4">
-        <b>skiftOS</b> is a project that I have been developing as a hobby, in parallel with my internship/course hours, for almost 3 years in modern C++.
+        <b>skiftOS</b> is a hobby project I’ve been building in modern C++ for over 6 years now.
       </p>
 
       <p className="mt-4">
-        The goal is not to create the new Windows, but to have fun with programming, sharpen my skills, learn the inner working of an OS, and create a system that I like!
+        I’m not trying to clone Windows or Linux. skiftOS is a playground to learn OS internals, sharpen systems skills, and build a small, coherent system I enjoy using.
       </p>
     </div>
 
@@ -119,7 +119,7 @@ function Beautiful() {
       </Subtitle>
 
       <p>
-        skiftOS has a beautiful and modern user interface. It's designed to be simple, intuitive, and easy to use.
+        skiftOS ships a reactive UI framework (inspired by SwiftUI/Flutter) with consistent typography, spacing, and theming across apps.
       </p>
     </div>
     <img className="rounded" src="static/capture.png" alt="" />
@@ -134,7 +134,7 @@ function Applications() {
       </Subtitle>
 
       <p>
-        From productivity tools to entertainment apps, skiftOS has something for everyone. Whether you're a developer or an everyday user, skiftOS applications are crafted to enhance your experience and provide seamless functionality.
+        Core apps cover the basics: files, text, media, images, terminal, and a few toys. They’re small, fast to build, and good examples for new contributors.
       </p>
     </div>
 
@@ -163,7 +163,7 @@ function RejectPosix() {
       </Subtitle>
 
       <p>
-        skiftOS is not a *NIX. It's a new system with a new API. It's not a Linux distribution, and it's not a Unix-like system. It's a new system inspired by 9front, Haiku, and Fuchsia.
+        skiftOS isn’t POSIX. It’s a fresh API and userland inspired by Plan 9, Haiku, and Fuchsia. Familiar ideas, different contracts.
       </p>
     </div>
     <div className="flex flex-col items-center gap-4">
@@ -178,7 +178,7 @@ function Features() {
   return <Section id="features">
     <Title>Features</Title>
     <p>
-      While skiftOS is still in early development, it already has a wide range of features that make it a great choice for anyone looking for a modern, secure, and easy-to-use operating system.
+      While skiftOS is still in early development, it already has the basics in place: a graphical shell, a set of core apps, and a microkernel foundation to experiment with. It’s rough around the edges, but it’s a fun playground for exploring how an operating system comes together.
     </p>
     <Beautiful />
     <Applications />
@@ -232,7 +232,7 @@ function Technologies() {
       <Tech
         icon="static/techs/tech-vaev.png"
         title="Browser Engine"
-        desc="A lightning-fast, lightweight, and secure HTML/CSS engine for."
+        desc="A lightweight HTML/CSS engine focused on layout and styling. Networking is minimal (HTTP only) and evolving."
         link="https://github.com/skift-org/vaev" />
     </div>
   </Section >
@@ -266,7 +266,7 @@ function Footer() {
   return <div className="text-center p-8 flex flex-col items-center gap-4">
     <img className="w-10" src="static/skift.svg" alt="" />
     "The delightful operating system"<br />
-    Copyright © 2018-2024 Cute Engineering<br />
+    Copyright © 2018-2025 Cute Engineering<br />
     All rights reserved.<br />
     <a href="https://github.com/skift-org/website"> Source code</a>
     <img className="w-10" src="static/glider.svg" alt="" />
