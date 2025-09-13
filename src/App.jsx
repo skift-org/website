@@ -254,9 +254,9 @@ function Social() {
       </Title>
       <div className="grid grid-cols-2 md:flex md:flex-row gap-8 mt-8">
         <SocialItem image="static/github.svg" name="GitHub" href="https://github.com/skift-org" />
+        <SocialItem image="static/bluesky.svg" name="Bluesky" href="https://bsky.app/profile/smnx.sh" />
         <SocialItem image="static/discord.svg" name="Discord" href="http://discord.skiftos.org/" />
         <SocialItem image="static/reddit.svg" name="Reddit" href="https://www.reddit.com/r/skift" />
-        <SocialItem image="static/twitter.svg" name="Twitter" href="https://twitter.com/search?q=%23skiftOS" />
       </div>
     </div>
   </Section>
